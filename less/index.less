@@ -1,0 +1,217 @@
+@c1: #d2e5ff;
+@c2: #000;
+@c3: #ddd;
+@c4: #ccc;
+@c5: #c0c0c0;
+@c6: #d2d2d2;
+@c7: #aaa;
+@c8: #75CA65;
+@c9: #fff;
+@c10: #333;
+@c11: #4D617B;
+@c12: #FF0000;
+@c13: #d2d423;
+@c14: #913A3A;
+
+@s1: 1px;
+@s2: 2px;
+@s3: 12px;
+@s4: 13px;
+@s5: 14px;
+@s6: 16px;
+@s7: 18px;
+@s8: 22px;
+@s9: 30px;
+@s10: 36px;
+
+.container {
+	border: @s1 solid @c7;
+	width: 400px;
+	height: 100%;
+	margin: 20px auto;
+	.header{
+		height: 200px;
+		border: none;
+		border-bottom: @s1 solid rgba(0,0,0,0.14);
+		box-shadow: 0 @s2 @s2 rgba(0,0,0,0.14);
+	    -moz-box-shadow: 0 @s2 @s2 rgba(0,0,0,0.14);
+	    -webkit-box-shadow: 0 @s2 @s2 rgba(0,0,0,0.14);
+	    filter: progid:DXImageTransform.Microsoft.Shadow(Strength=2, Direction=135, Color='#e3e3e3');
+	    -ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=2, Direction=135, Color='#e3e3e3')"; 
+	    .header_t{
+		    width: 100%;
+			font-size: 0px;
+			.bus_id{
+				width: 59%;
+				height: 110px;
+				display: inline-block;
+				vertical-align: top;
+				color: @c9;
+				text-align: center;
+				padding-top: 15px;
+				h1{
+					font-size: 100px;
+					line-height: 100px;
+				}
+			}
+			.time{
+				width: 40%;
+				height: 110px;
+				display: inline-block;
+				color: @c10;
+				vertical-align: top;
+				span{
+					display: inline-block;
+					line-height: 100%;
+				}
+				.start,.end{
+					text-align: left;
+					padding-left: 5px;
+					letter-spacing: @s1;
+				}
+				.start{
+					padding-top: 25px;
+					padding-bottom: 10px;
+				}
+				.bus_title{
+					font-size: 20px;
+					font-weight: 400;
+				}				
+				.bus_time{
+					margin-left: 8px;
+					font-size: @s7;
+					font-weight: 600;
+				}
+				.bus_area{
+					font-size: 26px;
+					font-weight: 800;
+					letter-spacing: @s1;
+					padding-left: 5px;
+				}
+			}
+		}
+		.to{
+			height: 45px;
+			text-align: left;
+		    font-size: 26px;
+		    color: @c9;
+		    .goto{
+				padding-left: 30px;
+				letter-spacing: 3px;
+			}
+			.last_location{
+				padding-left: 30px;
+				letter-spacing: 5px;
+			}
+		}
+		.imsg{
+			height: 20px;
+		    text-align: left;
+		    font-size: @s3;
+		    color: @c10;
+		    font-weight: 600;
+		    font-family: arial;
+		    letter-spacing: @s1;
+		    .price{
+				padding-left: 30px;
+			}
+		}
+	}
+	.header_color{
+		background: @c8;
+	}
+	.body{
+		position: relative;
+		.name_box{
+			margin-left: 140px;
+			margin-top: 15px;
+			.name{
+				font-size: @s4;
+			    line-height: 1.8;
+			    font-weight: bold;
+			    font-family: arial;
+			    color: @c10;
+			}
+			.first,.last{
+				font-size: @s5;
+				color: @c11;
+			}
+			.current{
+				font-size: 15px;
+				color: @c14 !important;
+			}
+			.current_af1,.current_af2{
+				font-size: @s5;
+			}
+		}
+		.arrow{
+			position: absolute;
+			left: 80px;
+			top: 5px;
+			span{
+				display: block;
+			}
+			.rectangle{
+				width: 15px;
+				height: 500px;
+				background-color: @c12;
+				margin-left: 15px;
+			}
+			.triangle{
+				border-right: 30px solid @c12;
+				border-top: none;
+				border-bottom: 60px solid transparent;
+			}
+			.circle{
+				position: absolute;
+			    width: @s4;
+			    height: @s4;
+			    border-radius: 50%;
+			    -webkit-border-radius: 50%;
+				-moz-border-radius: 50%;
+			    top: @s1;
+			    right: @s1;
+			    background-color: @c13;
+			    z-index: 9999;
+			    behavior: url(ie-css3.htc);
+			}
+		}
+		.footer{
+			margin-left: 110px;
+			line-height: 20px;
+			font-size: @s3;
+			transform:scale(0.75); 
+			-ms-transform:scale(0.75); 	/* IE 9 */
+			-moz-transform:scale(0.75);  	/* Firefox */
+			-webkit-transform:scale(0.75);  /* Safari 和 Chrome */
+			-o-transform:scale(0.75); 
+			height: 20px;
+			margin-top: 10px;
+			margin-bottom: 15px;
+			span{
+				display: inline-block;
+				height: 15px;
+				line-height: 15px;
+			}
+			.equipment{
+				margin-left: 10px;
+			}
+			.tel{
+				margin-left: 20px;
+			}
+			.tel_num{
+				padding-right: 10px;
+			}
+		}
+		.footer_color{
+			background: @c13;
+			display: inline-block;
+		}
+	}
+	.body_color{
+		background: @c9;
+	}
+}
+
+
+
